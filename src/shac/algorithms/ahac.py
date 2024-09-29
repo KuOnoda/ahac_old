@@ -47,7 +47,6 @@ class AHAC:
         max_epochs: int,  # number of short rollouts to do (i.e. epochs)
         train: bool,  # if False, we only eval the policy
         logdir: str,
-        name: str = "ahac", 
         grad_norm: Optional[float] = None,  # clip actor and ciritc grad norms
         critic_grad_norm: Optional[float] = None,
         contact_threshold: float = 1e9,  # for cutting horizons
@@ -126,7 +125,7 @@ class AHAC:
             self.ret_rms = RunningMeanStd(shape=(), device=self.device)
 
         env_name = self.env.__class__.__name__
-        self.name = name + "_" + env_name
+        self.name = self.__class__.__name__ + "_" + env_name
 
         self.grad_norm = grad_norm
         self.critic_grad_norm = critic_grad_norm
