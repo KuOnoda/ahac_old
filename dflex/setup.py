@@ -22,5 +22,6 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
     ],
-    install_requires=["ninja", "torch"],
+    python_requires=">=3.9",
+    install_requires=["ninja", "torch","urchin", "usd-core"],
 )
