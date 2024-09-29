@@ -17,7 +17,7 @@ from shac import envs
 from gym import wrappers
 from rl_games.torch_runner import Runner
 from rl_games.common import env_configurations, vecenv
-from svg.train import Workspace
+#from svg.train import Workspace
 from omegaconf import OmegaConf, open_dict
 
 
